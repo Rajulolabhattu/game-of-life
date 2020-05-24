@@ -7,7 +7,8 @@ node('raju'){
     }
     stage('postbuild'){
         archiveArtifacts 'gameoflife-web/target/*.war'
-        junit 'gameoflife-web/target/surefire-reports/*.xml'
+            input 'continue to the next step?'
+            junit 'gameoflife-web/target/surefire-reports/*.xml'
     }
 
 }
