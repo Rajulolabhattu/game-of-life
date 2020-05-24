@@ -7,7 +7,7 @@ node('ubuntu'){
     }
     stage('postbuild'){
         archiveArtifacts 'gameoflife-web/target/*.war'
-        junit 'gameoflife-web/target/surefire-repots/*.xml'
+        junit 'gameoflife-web/target/surefire/*.xml'
     }
 
 }
