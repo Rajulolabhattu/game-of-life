@@ -7,6 +7,7 @@ node('raju'){
     }
     stage('postbuild'){
         archiveArtifacts 'gameoflife-web/target/*.war'
+        junit 'jenkins/workspace/gol-02/gameoflife-web/target/surefire-reports/*.xml'
     }
 
 }
