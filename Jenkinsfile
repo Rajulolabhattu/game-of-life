@@ -1,4 +1,4 @@
-node('ubuntu'){
+node('raju'){
     stage('scm'){
         git 'https://github.com/Rajulolabhattu/game-of-life.git'
     }
