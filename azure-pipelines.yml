@@ -1,0 +1,16 @@
+# azure-pipelines.yml
+trigger:
+  - main  # Or whichever branch you want to trigger builds on
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: Maven@3
+    inputs:
+      mavenPomFile: 'pom.xml'
+      goals: 'clean install'
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '1.11' # Change to your project's JDK version
+      publishJUnitResults: true
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
