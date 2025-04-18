@@ -1,5 +1,5 @@
 trigger:
-  - main  # Change if your main branch has a different name
+  - main
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -11,6 +11,6 @@ steps:
       mavenPomFile: 'pom.xml'
       goals: 'clean install'
       javaHomeOption: 'JDKVersion'
-      jdkVersionOption: '1.11' # or '17' if your project needs it
+      jdkVersionOption: '1.11'
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
